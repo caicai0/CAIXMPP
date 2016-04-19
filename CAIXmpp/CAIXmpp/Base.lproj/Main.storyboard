@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zGN-O9-huf">
+                                <rect key="frame" x="20" y="28" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RIl-Bx-HQq">
+                                <rect key="frame" x="20" y="66" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="服务器" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FtC-QJ-yMq">
+                                <rect key="frame" x="20" y="104" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ad-bG-jbh">
+                                <rect key="frame" x="20" y="144" width="560" height="30"/>
+                                <state key="normal" title="登陆"/>
+                                <connections>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mnL-Eh-Ugq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1ad-bG-jbh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="5qp-XB-FCz"/>
+                            <constraint firstItem="RIl-Bx-HQq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="BMz-5d-DlO"/>
+                            <constraint firstAttribute="trailing" secondItem="1ad-bG-jbh" secondAttribute="trailing" constant="20" id="DvG-PK-sh0"/>
+                            <constraint firstItem="1ad-bG-jbh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="GUc-yL-LMl"/>
+                            <constraint firstItem="1ad-bG-jbh" firstAttribute="top" secondItem="FtC-QJ-yMq" secondAttribute="bottom" constant="10" id="TpW-Se-Xnv"/>
+                            <constraint firstAttribute="trailing" secondItem="1ad-bG-jbh" secondAttribute="trailing" constant="20" id="Vh9-Mp-3Zj"/>
+                            <constraint firstAttribute="trailing" secondItem="FtC-QJ-yMq" secondAttribute="trailing" constant="20" id="Z71-XL-67S"/>
+                            <constraint firstItem="FtC-QJ-yMq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="lbd-2y-YzM"/>
+                            <constraint firstItem="FtC-QJ-yMq" firstAttribute="top" secondItem="RIl-Bx-HQq" secondAttribute="bottom" constant="8" id="m3C-kY-ik7"/>
+                            <constraint firstItem="RIl-Bx-HQq" firstAttribute="top" secondItem="zGN-O9-huf" secondAttribute="bottom" constant="8" id="onk-wC-ngL"/>
+                            <constraint firstAttribute="trailing" secondItem="zGN-O9-huf" secondAttribute="trailing" constant="20" id="xo4-MV-6hK"/>
+                            <constraint firstItem="zGN-O9-huf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="y5K-Lz-tbF"/>
+                            <constraint firstItem="zGN-O9-huf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="yaW-Oq-gQd"/>
+                            <constraint firstAttribute="trailing" secondItem="RIl-Bx-HQq" secondAttribute="trailing" constant="20" id="yqd-eT-KE3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="passwordTfd" destination="RIl-Bx-HQq" id="ZRh-zk-ks0"/>
+                        <outlet property="serverTfd" destination="FtC-QJ-yMq" id="Xoa-sw-0KG"/>
+                        <outlet property="userNameTfd" destination="zGN-O9-huf" id="A3c-U7-SYQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="360" y="377"/>
+        </scene>
+    </scenes>
+</document>
