@@ -7,6 +7,7 @@
 //
 
 #import "CAIXmppStreamDelegate.h"
+#import "XMPPPresence.h"
 
 @implementation CAIXmppStreamDelegate
 
@@ -132,6 +133,18 @@
  **/
 - (void)xmppStreamDidConnect:(XMPPStream *)sender{
     NSLog(@"%s,%s",__FILE__,__FUNCTION__);
+    NSError* error=nil;
+    BOOL result;
+    if (!self.isRegist){
+        result=[sender authenticateWithPassword:self.password error:&error];
+    }
+    else{
+        result=[sender registerWithPassword:self.password error:&error];
+    }
+    ///注册只要一次，之后就改为登录，防止在重复连接的时候又去注册
+    self.isRegist=NO;
+    NSLog(@"authenticated:%d,%@",result,error);
+    //注册成功或是登陆成
 }
 
 /**
@@ -155,6 +168,8 @@
  **/
 - (void)xmppStreamDidAuthenticate:(XMPPStream *)sender{
     NSLog(@"%s,%s",__FILE__,__FUNCTION__);
+    XMPPPresence *presence = [XMPPPresence presence];
+    [sender sendElement:presence];
 }
 
 /**
@@ -162,6 +177,7 @@
  **/
 - (void)xmppStream:(XMPPStream *)sender didNotAuthenticate:(NSXMLElement *)error{
     NSLog(@"%s,%s",__FILE__,__FUNCTION__);
+    NSLog(@"error:%@",error);
 }
 
 /**
@@ -214,15 +230,15 @@
  **/
 - (XMPPIQ *)xmppStream:(XMPPStream *)sender willReceiveIQ:(XMPPIQ *)iq{
     NSLog(@"%s,%s",__FILE__,__FUNCTION__);
-    return nil;
+    return iq;
 }
 - (XMPPMessage *)xmppStream:(XMPPStream *)sender willReceiveMessage:(XMPPMessage *)message{
     NSLog(@"%s,%s",__FILE__,__FUNCTION__);
-    return nil;
+    return message;
 }
 - (XMPPPresence *)xmppStream:(XMPPStream *)sender willReceivePresence:(XMPPPresence *)presence{
     NSLog(@"%s,%s",__FILE__,__FUNCTION__);
-    return nil;
+    return presence;
 }
 
 /**
@@ -249,6 +265,7 @@
  **/
 - (BOOL)xmppStream:(XMPPStream *)sender didReceiveIQ:(XMPPIQ *)iq{
     NSLog(@"%s,%s",__FILE__,__FUNCTION__);
+    NSLog(@"iq:%@",iq);
     return NO;
 }
 - (void)xmppStream:(XMPPStream *)sender didReceiveMessage:(XMPPMessage *)message{
@@ -294,15 +311,15 @@
  **/
 - (XMPPIQ *)xmppStream:(XMPPStream *)sender willSendIQ:(XMPPIQ *)iq{
     NSLog(@"%s,%s",__FILE__,__FUNCTION__);
-    return nil;
+    return iq;
 }
 - (XMPPMessage *)xmppStream:(XMPPStream *)sender willSendMessage:(XMPPMessage *)message{
     NSLog(@"%s,%s",__FILE__,__FUNCTION__);
-    return nil;
+    return message;
 }
 - (XMPPPresence *)xmppStream:(XMPPStream *)sender willSendPresence:(XMPPPresence *)presence{
     NSLog(@"%s,%s",__FILE__,__FUNCTION__);
-    return nil;
+    return presence;
 }
 
 /**
@@ -391,6 +408,7 @@
  **/
 - (void)xmppStreamDidDisconnect:(XMPPStream *)sender withError:(NSError *)error{
     NSLog(@"%s,%s",__FILE__,__FUNCTION__);
+    NSLog(@"error:%@",error);
 }
 
 /**

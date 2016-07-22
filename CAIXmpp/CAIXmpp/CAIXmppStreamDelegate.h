@@ -11,4 +11,7 @@
 
 @interface CAIXmppStreamDelegate : NSObject <NSObject,XMPPStreamDelegate>
 
+@property (nonatomic, assign)BOOL isRegist;//是不是注册
+@property (nonatomic, strong)NSString * password;//登陆或是注册用的密码
+
 @end

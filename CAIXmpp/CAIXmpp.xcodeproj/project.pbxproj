@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B3636D61CCB38BD0088A686 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3636D41CCB38BD0088A686 /* MessageViewController.m */; };
+		4B3636D71CCB38BD0088A686 /* MessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B3636D51CCB38BD0088A686 /* MessageViewController.xib */; };
+		4B80D0BD1CC91ECB00AF280B /* rosterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B80D0BB1CC91ECB00AF280B /* rosterViewController.m */; };
+		4B80D0BE1CC91ECB00AF280B /* rosterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B80D0BC1CC91ECB00AF280B /* rosterViewController.xib */; };
 		4BE597B71CC64CCE0077C97A /* CAIXmppStreamDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE597B61CC64CCE0077C97A /* CAIXmppStreamDelegate.m */; };
+		4BE597BA1CC654BF0077C97A /* testViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE597B91CC654BF0077C97A /* testViewController.m */; };
 		4BE7053E1C9BC74B00164381 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE7053D1C9BC74B00164381 /* main.m */; };
 		4BE705411C9BC74B00164381 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE705401C9BC74B00164381 /* AppDelegate.m */; };
 		4BE705441C9BC74B00164381 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BE705431C9BC74B00164381 /* ViewController.m */; };
@@ -186,8 +191,16 @@
 
 /* Begin PBXFileReference section */
 		4B0489141C9FD5DA00556401 /* Enum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enum.h; sourceTree = "<group>"; };
+		4B3636D31CCB38BD0088A686 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		4B3636D41CCB38BD0088A686 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		4B3636D51CCB38BD0088A686 /* MessageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageViewController.xib; sourceTree = "<group>"; };
+		4B80D0BA1CC91ECB00AF280B /* rosterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rosterViewController.h; sourceTree = "<group>"; };
+		4B80D0BB1CC91ECB00AF280B /* rosterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rosterViewController.m; sourceTree = "<group>"; };
+		4B80D0BC1CC91ECB00AF280B /* rosterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = rosterViewController.xib; sourceTree = "<group>"; };
 		4BE597B51CC64CCE0077C97A /* CAIXmppStreamDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAIXmppStreamDelegate.h; sourceTree = "<group>"; };
 		4BE597B61CC64CCE0077C97A /* CAIXmppStreamDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAIXmppStreamDelegate.m; sourceTree = "<group>"; };
+		4BE597B81CC654BF0077C97A /* testViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testViewController.h; sourceTree = "<group>"; };
+		4BE597B91CC654BF0077C97A /* testViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testViewController.m; sourceTree = "<group>"; };
 		4BE705391C9BC74B00164381 /* CAIXmpp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CAIXmpp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BE7053D1C9BC74B00164381 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4BE7053F1C9BC74B00164381 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -586,6 +599,14 @@
 				4B0489141C9FD5DA00556401 /* Enum.h */,
 				4BE597B51CC64CCE0077C97A /* CAIXmppStreamDelegate.h */,
 				4BE597B61CC64CCE0077C97A /* CAIXmppStreamDelegate.m */,
+				4BE597B81CC654BF0077C97A /* testViewController.h */,
+				4BE597B91CC654BF0077C97A /* testViewController.m */,
+				4B80D0BA1CC91ECB00AF280B /* rosterViewController.h */,
+				4B80D0BB1CC91ECB00AF280B /* rosterViewController.m */,
+				4B80D0BC1CC91ECB00AF280B /* rosterViewController.xib */,
+				4B3636D31CCB38BD0088A686 /* MessageViewController.h */,
+				4B3636D41CCB38BD0088A686 /* MessageViewController.m */,
+				4B3636D51CCB38BD0088A686 /* MessageViewController.xib */,
 			);
 			path = CAIXmpp;
 			sourceTree = "<group>";
@@ -1643,7 +1664,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B80D0BE1CC91ECB00AF280B /* rosterViewController.xib in Resources */,
 				4BE710B11C9BC78B00164381 /* build-libidn.sh in Resources */,
+				4B3636D71CCB38BD0088A686 /* MessageViewController.xib in Resources */,
 				4BE7054C1C9BC74B00164381 /* LaunchScreen.storyboard in Resources */,
 				4BE705491C9BC74B00164381 /* Assets.xcassets in Resources */,
 				4BE705471C9BC74B00164381 /* Main.storyboard in Resources */,
@@ -1683,6 +1706,7 @@
 				4BE70F631C9BC78B00164381 /* XEP_0223.m in Sources */,
 				4BE70F301C9BC78B00164381 /* XMPPvCardAvatarCoreDataStorageObject.m in Sources */,
 				4BE70F611C9BC78B00164381 /* XMPPTime.m in Sources */,
+				4B80D0BD1CC91ECB00AF280B /* rosterViewController.m in Sources */,
 				4BE710B61C9BC78B00164381 /* DDASLLogCapture.m in Sources */,
 				4BE70F281C9BC78B00164381 /* XMPPRoomOccupantHybridMemoryStorageObject.m in Sources */,
 				4BE70F271C9BC78B00164381 /* XMPPRoomMessageHybridCoreDataStorageObject.m in Sources */,
@@ -1695,6 +1719,7 @@
 				4BE70F2C1C9BC78B00164381 /* XMPPMessage+XEP0045.m in Sources */,
 				4BE70F741C9BC78B00164381 /* XMPPTimer.m in Sources */,
 				4BE70F051C9BC78B00164381 /* XMPPModule.m in Sources */,
+				4BE597BA1CC654BF0077C97A /* testViewController.m in Sources */,
 				4BE70F3A1C9BC78B00164381 /* XMPPvCardTempModule.m in Sources */,
 				4BE70F2A1C9BC78B00164381 /* XMPPRoomMessageMemoryStorageObject.m in Sources */,
 				4BE710B01C9BC78B00164381 /* DDXMLNode.m in Sources */,
@@ -1755,6 +1780,7 @@
 				4BE70F081C9BC78B00164381 /* XMPPStream.m in Sources */,
 				4BE70F411C9BC78B00164381 /* XMPPIQ+XEP_0066.m in Sources */,
 				4BE70F721C9BC78B00164381 /* XMPPSRVResolver.m in Sources */,
+				4B3636D61CCB38BD0088A686 /* MessageViewController.m in Sources */,
 				4BE710B31C9BC78B00164381 /* CLIColor.m in Sources */,
 				4BE70F1C1C9BC78B00164381 /* XMPPIQ+JabberRPCResonse.m in Sources */,
 				4BE70F731C9BC78B00164381 /* XMPPStringPrep.m in Sources */,
